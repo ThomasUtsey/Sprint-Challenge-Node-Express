@@ -26,13 +26,34 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express for node.js is a very popular and commonly supported frame work that is quick to set up and provides a robust set of features and has compatibility with a large amount of http methods and middleware. 
+
 - [ ] Describe Middleware?
+
+Middleware is a function that takes in the request(req),response(res),next, and err paramaters to perform specific needs of the developer to implement the server. Some types of middle ware are 
+
+Application-level middleware
+Router-level middleware
+Error-handling middleware
+Built-in middleware
+Third-party middleware
+
+a wide range of built in and 3rd party middle ware and an explenation for functionality and how to implement them  can be found at 
+https://expressjs.com/en/resources/middleware.html.
 
 - [ ] Describe a Resource?
 
+This is a pretty vague question and i would return the answer as anything such as data, middleware, data handlers, scripts, publishers, the terminal and the editor used to develop the node server. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+ while clients are not likely to understand codes and developer styled messages but upon success the res can return a code such as 200 and a message saying the action was successful. 
+
 - [ ] How can we partition our application into sub-applications?
+
+ Some methods to implement scalability of a server are to clone, split, decluster and load balancing. This can be done by delegation specifice actions, users that meet criteria such as location and data needs to servers better equipped to handle that need. 
+
+ for example a popular app may have numerous servers throughout the world that handle their specific geo locations. In addition, some computers may be better equipped to handle specifice not load bearing request in a more efficient manner. 
 
 ## Project Setup
 
