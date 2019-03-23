@@ -1,7 +1,7 @@
 const express = require('express'); // importing a CommonJS module
 
-// const userRouter = require('./routes/projname');
-// const postRouter = require('./routes/projdsc');
+const projName = require('./routes/projname')
+const projDsc = require('./routes/projdsc');
 
 const helmet = require('helmet');
 
@@ -21,8 +21,8 @@ server.use(helmet());
 server.use(morgan('dev'));
 server.use(logger);
 
-// server.use('/api/name', projName);
-// server.use('/api/desc', projDsc);
+server.use('/api/names', projName);
+server.use('/api/desc', projDsc);
 
 
 server.get('/', async (req, res) => {
