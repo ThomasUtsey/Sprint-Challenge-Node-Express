@@ -29,8 +29,8 @@ router.get('/', async (req, res) => {
 // get a name by id
 router.get('/:id',async (req, res) =>{
   try {
-    console.log(req.action)
-    const id = await nmdb.get(req.action);
+    
+    const id = await nmdb.get(req.params.id);
     
     if (id) {
       res.status(200).json(id);
@@ -40,7 +40,7 @@ router.get('/:id',async (req, res) =>{
   }catch (error){
     console.log(error);
     res.status(500).json({
-      message: 'Error retrieving the hub'
+      message: 'Error retrieving the Project Name'
   })
   }
 })
